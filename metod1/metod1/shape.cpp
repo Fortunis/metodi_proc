@@ -19,15 +19,17 @@ namespace simple_shapes {
 				sp = new shape;
 				sp->key = shape::type::BALL;
 				sp->obj = (void*)InBall(ifst);
-				return sp;
+				break;
 			case 2:
 				sp = new shape;
 				sp->key = shape::type::PARALLELEPIPED;
 				sp->obj = (void*)InParallelepiped(ifst);
-				return sp;
+				break;
 			default:
 				return NULL;
 		}
+		ifst >> sp->temperature;
+		return sp;
 	}
 
 	// Сигнатуры требуемых внешних функций.
@@ -45,5 +47,7 @@ namespace simple_shapes {
 		default:
 			ofst << "Incorrect figure!" << endl;
 		}
+		ofst << "temperature = " << s.temperature << endl;
 	}
+
 } // end simple_shapes namespace

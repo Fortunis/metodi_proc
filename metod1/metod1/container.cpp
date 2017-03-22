@@ -53,7 +53,7 @@ namespace simple_shapes {
 
 	// Сигнатуры требуемых внешних функций
 	void Out(shape &s, ofstream &ofst);
-	// Вывод содержимого контейнера в указанный поток
+	
 	void Out(container &c, ofstream &ofst) {
 		ofst << "Container contains " << c.size
 		<< " elements." << endl;
@@ -67,7 +67,7 @@ namespace simple_shapes {
 
 			current = c.Current->cont;
 			Out(*current, ofst);
-
+			
 			current = nullptr;
 			delete current;
 		}

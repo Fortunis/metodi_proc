@@ -21,4 +21,5 @@ namespace simple_shapes {
 		<< ", c = " << p.c 
 		<< ", Density = " << p.d << endl;
 	}
+
 } // end simple_shapes namespace
