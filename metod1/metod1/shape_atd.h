@@ -9,7 +9,7 @@ namespace simple_shapes {
 	
 	struct shape {
 		// значения ключей для каждой из фигур
-		enum type { BALL, PARALLELEPIPED };
+		enum type { BALL, PARALLELEPIPED};
 		type key; // ключ
 		// используемые альтернативы
 		void* obj;

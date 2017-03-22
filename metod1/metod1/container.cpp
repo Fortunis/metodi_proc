@@ -67,6 +67,45 @@ namespace simple_shapes {
 
 			current = c.Current->cont;
 			Out(*current, ofst);
+			
+			current = nullptr;
+			delete current;
+		}
+	}
+
+	
+	void OutBall(container &c, ofstream &ofst) {
+		ofst << "Only balls." << endl;
+		shape* current = new shape;
+
+		for (int i = 0; i < c.size; i++)
+		{
+
+			c.Current = c.Current->Next;
+
+			current = c.Current->cont;
+			if (current->key == shape::type::BALL) {
+				Out(*current, ofst);
+			}
+
+			current = nullptr;
+			delete current;
+		}
+	}
+
+	void OutParallelepiped(container &c, ofstream &ofst) {
+		ofst << "Only parallelepipeds." << endl;
+		shape* current = new shape;
+
+		for (int i = 0; i < c.size; i++)
+		{
+
+			c.Current = c.Current->Next;
+
+			current = c.Current->cont;
+			if (current->key == shape::type::PARALLELEPIPED) {
+				Out(*current, ofst);
+			}
 
 			current = nullptr;
 			delete current;

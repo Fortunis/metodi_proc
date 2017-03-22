@@ -19,15 +19,16 @@ namespace simple_shapes {
 				sp = new shape;
 				sp->key = shape::type::BALL;
 				sp->obj = (void*)InBall(ifst);
-				return sp;
+				break;
 			case 2:
 				sp = new shape;
 				sp->key = shape::type::PARALLELEPIPED;
 				sp->obj = (void*)InParallelepiped(ifst);
-				return sp;
+				break;
 			default:
 				return NULL;
 		}
+		return sp;
 	}
 
 	// Сигнатуры требуемых внешних функций.
