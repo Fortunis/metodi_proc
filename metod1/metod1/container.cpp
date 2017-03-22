@@ -74,4 +74,38 @@ namespace simple_shapes {
 			delete current;
 		}
 	}
+
+	// Сигнатуры требуемых функций
+	bool Compare(shape *first, shape *second);
+	
+	void Sort(container &l)
+	{
+		container *s, *ptr;
+		shape *temp;
+		if (l.Tail == nullptr)
+		{
+			return;
+		}
+		s = l.Tail->Next;
+
+		while (s != l.Tail)
+		{
+			ptr = s->Next;
+			while (ptr != l.Tail->Next)
+			{
+				if (ptr != l.Tail->Next)
+				{
+						if (Compare(s->cont, ptr->cont))
+						{
+							temp = s->cont;
+							s->cont = ptr->cont;
+							ptr->cont = temp;
+						}
+				}
+				ptr = ptr->Next;
+			}
+			s = s->Next;
+		}
+	}
+
 } // end simple_shapes namespace

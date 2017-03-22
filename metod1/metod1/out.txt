@@ -1,3 +1,0 @@
-Filled container. 
-Container contains 8 elements.
-It is Ball: r = 1, Density = 4
