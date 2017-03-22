@@ -10,7 +10,6 @@ namespace simple_shapes {
 		ball *b;
 		b = new ball;
 		ifst >> b->r >> b->d;
-		cout << b->r;
 		return b;
 	}
 

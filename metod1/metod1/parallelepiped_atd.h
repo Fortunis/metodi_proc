@@ -4,7 +4,7 @@
 namespace simple_shapes {
 	// параллелепипед
 	struct parallelepiped {
-		int a, b, c; // стороны
+		float a, b, c; // стороны
 		float d; //плотность(density)
 	};
 } // end simple_shapes namespace
