@@ -23,7 +23,9 @@ int main(int argc, char* argv[]) {
 	//argv[2] = "out";
 
 	ifstream ifst(argv[1]);
+	//ifstream ifst("in.txt");
 	ofstream ofst(argv[2]);
+	//ofstream ofst("out.txt");
 	cout << "Start"<< endl;
 	container c;
 	In(c, ifst);

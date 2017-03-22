@@ -46,4 +46,19 @@ namespace simple_shapes {
 			ofst << "Incorrect figure!" << endl;
 		}
 	}
+
+	double Volume(ball &b);
+	double Volume(parallelepiped &p);
+	
+	double Volume(shape &s) {
+		switch (s.key) {
+		case shape::type::BALL:
+			return Volume(*(ball *)s.obj);
+		case shape::type::PARALLELEPIPED:
+			return Volume(*(parallelepiped *)s.obj);
+		default:
+			return -1;
+		}
+	}
+
 } // end simple_shapes namespace
