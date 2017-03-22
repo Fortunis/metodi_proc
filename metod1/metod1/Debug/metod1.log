@@ -1,13 +1,11 @@
-﻿  ball.cpp
-  Создание кода...
-  Компиляция...
-  container.cpp
-  Создание кода...
-  Компиляция...
-  tetrahedron.cpp
-  parallelepiped.cpp
-  Создание кода...
-  Пропуск... (изменения не обнаружены)
+﻿  tetrahedron.cpp
   shape.cpp
-  metod1.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\NewClass\metod1\Debug\metod1.exe
-  metod1.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\NewClass\metod1\Debug\metod1.pdb (Full PDB)
+  parallelepiped.cpp
+  main.cpp
+  container.cpp
+  ball.cpp
+  Создание кода...
+  LINK : не найден или не выполнена сборка C:\Users\Евгений\Documents\GitHub\metodi_proc\metod1\Debug\metod1.exe при последней инкрементной компоновке; выполняется полная компоновка
+ball.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/SAFESEH"
+  metod1.vcxproj -> C:\Users\Евгений\Documents\GitHub\metodi_proc\metod1\Debug\metod1.exe
+  metod1.vcxproj -> C:\Users\Евгений\Documents\GitHub\metodi_proc\metod1\Debug\metod1.pdb (Full PDB)

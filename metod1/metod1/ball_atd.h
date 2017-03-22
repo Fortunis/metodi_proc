@@ -4,7 +4,7 @@
 namespace simple_shapes {
 	// шар
 	struct ball {
-		float r; // радиус
+		int r; // радиус
 		float d; //плотность(density)
 	};
 } // end simple_shapes namespace
