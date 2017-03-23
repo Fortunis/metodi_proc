@@ -1,10 +1,66 @@
 Filled container. 
+<<<<<<< HEAD
+Container contains 4 elements.
+It is Ball: r = 1, Density = 4
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+It is Ball: r = 6, Density = 18
+It is Parallelepiped: a = 44, b = 21, c = 1, Density = 15
+Only balls.
+It is Ball: r = 1, Density = 4
+It is Ball: r = 6, Density = 18
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+Container contains 5 elements.
+It is Ball: r = 1, Density = 4
+temperature = 7
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+temperature = 7
+It is Ball: r = 6, Density = 18
+temperature = 7
+It is Parallelepiped: a = 44, b = 21, c = 1, Density = 15
+temperature = 7
+It is Ball: r = 2, Density = 15
+temperature = 16
+=======
+Container contains 7 elements.
+It is Ball: r = 1, Density = 4
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+It is Ball: r = 6, Density = 18
+It is Parallelepiped: a = 44, b = 21, c = 1, Density = 15
+It is Tetrahedron: t = 1.2, Density = 18
+It is Tetrahedron: t = 1, Density = 2.5
+It is Tetrahedron: t = 3, Density = 3
+>>>>>>> refs/remotes/origin/NewClass
+=======
 Container contains 6 elements.
-It is Ball: r = 1, Density = 1.5
-It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4.5
-It is Ball: r = 1, Density = 3
-It is Ball: r = 2, Density = 3
-It is Ball: r = 3, Density = 5
-It is Ball: r = 3, Density = 6
+It is Ball: r = 1000, Density = 1
+volume = 4.18667e+09
+It is Ball: r = 1, Density = 4
+volume = 4.18667
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+volume = 6
+It is Ball: r = 6, Density = 18
+volume = 904.32
+It is Parallelepiped: a = 3, b = 2, c = 1, Density = 15
+volume = 6
+It is Ball: r = 2000, Density = 2
+volume = 3.34933e+10
+Sorted container. 
+Container contains 6 elements.
+It is Ball: r = 2000, Density = 2
+volume = 3.34933e+10
+It is Ball: r = 1000, Density = 1
+volume = 4.18667e+09
+It is Ball: r = 6, Density = 18
+volume = 904.32
+It is Parallelepiped: a = 3, b = 2, c = 1, Density = 15
+volume = 6
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+volume = 6
+It is Ball: r = 1, Density = 4
+volume = 4.18667
+>>>>>>> refs/remotes/origin/NewFunction
+>>>>>>> refs/remotes/origin/NewFunction
 Empty container. 
 Container contains 0 elements.
