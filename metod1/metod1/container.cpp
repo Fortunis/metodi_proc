@@ -117,6 +117,26 @@ namespace simple_shapes {
 		}
 	}
 
+	void OutTetrahedron(container &c, ofstream &ofst) {
+		ofst << "Only tetrahedrons." << endl;
+		shape* current = new shape;
+
+		for (int i = 0; i < c.size; i++)
+		{
+
+			c.Current = c.Current->Next;
+
+			current = c.Current->cont;
+			if (current->key == shape::type::TETRAHEDRON) {
+				Out(*current, ofst);
+			}
+
+			ofst << "volume = " << Volume(*current) << endl;
+
+			current = nullptr;
+			delete current;
+		}
+	}
 	// Сигнатуры требуемых функций
 	bool Compare(shape *first, shape *second);
 	
