@@ -84,12 +84,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="parallelepiped.cpp" />
     <ClCompile Include="shape.cpp" />
+    <ClCompile Include="tetrahedron.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ball_atd.h" />
     <ClInclude Include="container_atd.h" />
     <ClInclude Include="parallelepiped_atd.h" />
     <ClInclude Include="shape_atd.h" />
+    <ClInclude Include="tetrahedron_atd.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

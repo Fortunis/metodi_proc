@@ -8,6 +8,7 @@ namespace simple_shapes {
 	// Сигнатуры требуемых внешних функций
 	ball* InBall(ifstream &ist);
 	parallelepiped* InParallelepiped(ifstream &ist);
+	tetrahedron* InTetrahedron(ifstream &ist);
 	// Ввод параметров обобщенной фигуры из файла
 	shape* In(ifstream &ifst)
 	{
@@ -25,6 +26,12 @@ namespace simple_shapes {
 				sp->key = shape::type::PARALLELEPIPED;
 				sp->obj = (void*)InParallelepiped(ifst);
 				break;
+				return sp;
+			case 3:
+				sp = new shape;
+				sp->key = shape::type::TETRAHEDRON;
+				sp->obj = (void*)InTetrahedron(ifst);
+				break;
 			default:
 				return NULL;
 		}
@@ -35,6 +42,7 @@ namespace simple_shapes {
 	// Сигнатуры требуемых внешних функций.
 	void OutBall(ball &b, ofstream &ofst);
 	void OutParallelepiped(parallelepiped &p, ofstream &ofst);
+	void OutTetrahedron(tetrahedron &t, ofstream &ofst);
 	// Вывод параметров текущей фигуры в поток
 	void Out(shape &s, ofstream &ofst) {
 		switch (s.key) {
@@ -43,6 +51,9 @@ namespace simple_shapes {
 			break;
 		case shape::type::PARALLELEPIPED:
 			OutParallelepiped(*(parallelepiped *)s.obj, ofst);
+			break;
+		case shape::type::TETRAHEDRON:
+			OutTetrahedron(*(tetrahedron *)s.obj, ofst);
 			break;
 		default:
 			ofst << "Incorrect figure!" << endl;

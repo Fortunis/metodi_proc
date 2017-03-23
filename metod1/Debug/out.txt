@@ -1,4 +1,5 @@
 Filled container. 
+<<<<<<< HEAD
 Container contains 5 elements.
 It is Ball: r = 1, Density = 4
 temperature = 7
@@ -10,5 +11,15 @@ It is Parallelepiped: a = 44, b = 21, c = 1, Density = 15
 temperature = 7
 It is Ball: r = 2, Density = 15
 temperature = 16
+=======
+Container contains 7 elements.
+It is Ball: r = 1, Density = 4
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+It is Ball: r = 6, Density = 18
+It is Parallelepiped: a = 44, b = 21, c = 1, Density = 15
+It is Tetrahedron: t = 1.2, Density = 18
+It is Tetrahedron: t = 1, Density = 2.5
+It is Tetrahedron: t = 3, Density = 3
+>>>>>>> refs/remotes/origin/NewClass
 Empty container. 
 Container contains 0 elements.
