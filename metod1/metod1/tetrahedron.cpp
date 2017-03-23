@@ -17,4 +17,8 @@ namespace simple_shapes {
 	void OutTetrahedron(tetrahedron &t, ofstream &ofst) {
 		ofst << "It is Tetrahedron: t = " << t.l << ", Density = " << t.d << endl;
 	}
+
+	double Volume(tetrahedron &b) {
+		return sqrt(2)*b.l*b.l*b.l/12;
+	}
 } // end simple_shapes namespace

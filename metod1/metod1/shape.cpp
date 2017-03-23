@@ -63,15 +63,18 @@ namespace simple_shapes {
 
 	double Volume(ball &b);
 	double Volume(parallelepiped &p);
-	
+	double Volume(tetrahedron &p);
+
 	double Volume(shape &s) {
 		switch (s.key) {
 		case shape::type::BALL:
 			return Volume(*(ball *)s.obj);
 		case shape::type::PARALLELEPIPED:
 			return Volume(*(parallelepiped *)s.obj);
+		case shape::type::TETRAHEDRON:
+			return Volume(*(tetrahedron *)s.obj);
 		default:
-			return -1;
+			return 0;
 		}
 	}
 
