@@ -14,6 +14,8 @@ namespace simple_shapes {
 		type key; // ключ
 		// используемые альтернативы
 		void* obj;
+
+		int temperature;
 	};
 } // end simple_shapes namespace
 #endif
