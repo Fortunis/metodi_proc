@@ -19,15 +19,16 @@ namespace simple_shapes {
 				sp = new shape;
 				sp->key = shape::type::BALL;
 				sp->obj = (void*)InBall(ifst);
-				return sp;
+				break;
 			case 2:
 				sp = new shape;
 				sp->key = shape::type::PARALLELEPIPED;
 				sp->obj = (void*)InParallelepiped(ifst);
-				return sp;
+				break;
 			default:
 				return NULL;
 		}
+		return sp;
 	}
 
 	// Сигнатуры требуемых внешних функций.
@@ -59,6 +60,12 @@ namespace simple_shapes {
 		default:
 			return -1;
 		}
+	}
+
+	//-----------------------------------------------------
+	// Cравнение ключей двух программных объектов
+	bool Compare(shape *first, shape *second) {
+		return Volume(*first) < Volume(*second);
 	}
 
 } // end simple_shapes namespace
