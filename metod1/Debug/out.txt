@@ -1,5 +1,15 @@
 Filled container. 
 <<<<<<< HEAD
+Container contains 4 elements.
+It is Ball: r = 1, Density = 4
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+It is Ball: r = 6, Density = 18
+It is Parallelepiped: a = 44, b = 21, c = 1, Density = 15
+Only balls.
+It is Ball: r = 1, Density = 4
+It is Ball: r = 6, Density = 18
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 Container contains 5 elements.
 It is Ball: r = 1, Density = 4
@@ -50,6 +60,7 @@ It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
 volume = 6
 It is Ball: r = 1, Density = 4
 volume = 4.18667
+>>>>>>> refs/remotes/origin/NewFunction
 >>>>>>> refs/remotes/origin/NewFunction
 Empty container. 
 Container contains 0 elements.

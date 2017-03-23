@@ -26,7 +26,6 @@ namespace simple_shapes {
 				sp->key = shape::type::PARALLELEPIPED;
 				sp->obj = (void*)InParallelepiped(ifst);
 				break;
-
 			case 3:
 				sp = new shape;
 				sp->key = shape::type::TETRAHEDRON;

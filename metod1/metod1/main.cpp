@@ -9,17 +9,21 @@ namespace simple_shapes {
 	void Clear(container &c);
 	void In(container &c, ifstream &ifst) ;
 	void Out(container &c, ofstream &ofst) ;
+
+	void OutBall(container &c, ofstream &ofst);
+
 	void Sort(container &c);
+
 }
 
 using namespace simple_shapes;
 
 int main(int argc, char* argv[]) {
-	/*if(argc !=3) {
+	if(argc !=3) {
 		cout << "incorrect command line! "
 		"Waited: command infile outfile" << endl;
 		exit(1);
-	}*/
+	}
 	//argv[1] = "in";
 	//argv[2] = "out";
 
@@ -33,6 +37,7 @@ int main(int argc, char* argv[]) {
 	In(c, ifst);
 	ofst << "Filled container. " << endl;
 	Out(c, ofst);
+	OutBall(c, ofst);
 	Sort(c);
 	ofst << "Sorted container. " << endl;
 	Out(c, ofst);

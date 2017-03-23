@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+﻿  main.cpp
+  metod1.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\FiltredOutput\metod1\Debug\metod1.exe
+  metod1.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\2\FiltredOutput\metod1\Debug\metod1.pdb (Full PDB)
+=======
 ﻿  tetrahedron.cpp
   shape.cpp
   parallelepiped.cpp
@@ -8,3 +13,4 @@
 ball.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/SAFESEH"
   metod1.vcxproj -> C:\Users\Евгений\Documents\GitHub\metodi_proc\metod1\Debug\metod1.exe
   metod1.vcxproj -> C:\Users\Евгений\Documents\GitHub\metodi_proc\metod1\Debug\metod1.pdb (Full PDB)
+>>>>>>> refs/remotes/origin/NewFunction
