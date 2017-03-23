@@ -53,7 +53,10 @@ namespace simple_shapes {
 
 	// Сигнатуры требуемых внешних функций
 	void Out(shape &s, ofstream &ofst);
+
+	double Volume(shape &s);
 	// Вывод содержимого контейнера в указанный поток
+
 	void Out(container &c, ofstream &ofst) {
 		ofst << "Container contains " << c.size
 		<< " elements." << endl;
@@ -107,8 +110,44 @@ namespace simple_shapes {
 				Out(*current, ofst);
 			}
 
+			ofst << "volume = " << Volume(*current) << endl;
+
 			current = nullptr;
 			delete current;
 		}
 	}
+
+	// Сигнатуры требуемых функций
+	bool Compare(shape *first, shape *second);
+	
+	void Sort(container &l)
+	{
+		container *s, *ptr;
+		shape *temp;
+		if (l.Tail == nullptr)
+		{
+			return;
+		}
+		s = l.Tail->Next;
+
+		while (s != l.Tail)
+		{
+			ptr = s->Next;
+			while (ptr != l.Tail->Next)
+			{
+				if (ptr != l.Tail->Next)
+				{
+						if (Compare(s->cont, ptr->cont))
+						{
+							temp = s->cont;
+							s->cont = ptr->cont;
+							ptr->cont = temp;
+						}
+				}
+				ptr = ptr->Next;
+			}
+			s = s->Next;
+		}
+	}
+
 } // end simple_shapes namespace

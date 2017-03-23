@@ -9,7 +9,11 @@ namespace simple_shapes {
 	void Clear(container &c);
 	void In(container &c, ifstream &ifst) ;
 	void Out(container &c, ofstream &ofst) ;
+
 	void OutBall(container &c, ofstream &ofst);
+
+	void Sort(container &c);
+
 }
 
 using namespace simple_shapes;
@@ -24,13 +28,19 @@ int main(int argc, char* argv[]) {
 	//argv[2] = "out";
 
 	ifstream ifst(argv[1]);
+	//ifstream ifst("in.txt");
 	ofstream ofst(argv[2]);
+	//ofstream ofst("out.txt");
+
 	cout << "Start"<< endl;
 	container c;
 	In(c, ifst);
 	ofst << "Filled container. " << endl;
 	Out(c, ofst);
 	OutBall(c, ofst);
+	Sort(c);
+	ofst << "Sorted container. " << endl;
+	Out(c, ofst);
 	Clear(c);
 	ofst << "Empty container. " << endl;
 	Out(c, ofst);
