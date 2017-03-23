@@ -48,6 +48,7 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="tetrahedron_atd.h">
+    <ClInclude Include="main.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

@@ -26,7 +26,7 @@ namespace simple_shapes {
 				sp->key = shape::type::PARALLELEPIPED;
 				sp->obj = (void*)InParallelepiped(ifst);
 				break;
-				return sp;
+
 			case 3:
 				sp = new shape;
 				sp->key = shape::type::TETRAHEDRON;
@@ -59,6 +59,26 @@ namespace simple_shapes {
 			ofst << "Incorrect figure!" << endl;
 		}
 		ofst << "temperature = " << s.temperature << endl;
+	}
+
+	double Volume(ball &b);
+	double Volume(parallelepiped &p);
+	
+	double Volume(shape &s) {
+		switch (s.key) {
+		case shape::type::BALL:
+			return Volume(*(ball *)s.obj);
+		case shape::type::PARALLELEPIPED:
+			return Volume(*(parallelepiped *)s.obj);
+		default:
+			return -1;
+		}
+	}
+
+	//-----------------------------------------------------
+	// Cравнение ключей двух программных объектов
+	bool Compare(shape *first, shape *second) {
+		return Volume(*first) < Volume(*second);
 	}
 
 } // end simple_shapes namespace

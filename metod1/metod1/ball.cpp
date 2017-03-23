@@ -17,4 +17,8 @@ namespace simple_shapes {
 	void OutBall(ball &b, ofstream &ofst) {
 		ofst << "It is Ball: r = " << b.r << ", Density = "<< b.d << endl;
 	}
+
+	double Volume(ball &b) {
+		return 4*3.14*b.r*b.r*b.r/3;
+	}
 } // end simple_shapes namespace

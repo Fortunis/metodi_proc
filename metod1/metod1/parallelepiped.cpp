@@ -22,4 +22,8 @@ namespace simple_shapes {
 		<< ", Density = " << p.d << endl;
 	}
 
+	double Volume(parallelepiped &p) {
+		return p.a*p.b*p.c;
+	}
+
 } // end simple_shapes namespace

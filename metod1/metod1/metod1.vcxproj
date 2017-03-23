@@ -89,6 +89,7 @@
   <ItemGroup>
     <ClInclude Include="ball_atd.h" />
     <ClInclude Include="container_atd.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="parallelepiped_atd.h" />
     <ClInclude Include="shape_atd.h" />
     <ClInclude Include="tetrahedron_atd.h" />
