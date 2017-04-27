@@ -1,0 +1,2 @@
+It is Ball: r = 2, Density = 3
+temperature = 4

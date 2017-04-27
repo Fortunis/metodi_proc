@@ -55,11 +55,13 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\Евгений\Downloads\googletest-master\googletest-master\googletest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>NotSet</SubSystem>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -81,17 +83,23 @@
   <ItemGroup>
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="container.cpp" />
+    <ClCompile Include="FilesCmp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="parallelepiped.cpp" />
     <ClCompile Include="shape.cpp" />
     <ClCompile Include="tetrahedron.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BallTest.h" />
     <ClInclude Include="ball_atd.h" />
+    <ClInclude Include="ContainerTest.h" />
     <ClInclude Include="container_atd.h" />
-    <ClInclude Include="main.h" />
+    <ClInclude Include="FilesCmp.h" />
+    <ClInclude Include="ParallelepipedTest.h" />
     <ClInclude Include="parallelepiped_atd.h" />
+    <ClInclude Include="ShapeTest.h" />
     <ClInclude Include="shape_atd.h" />
+    <ClInclude Include="TetrahedronTest.h" />
     <ClInclude Include="tetrahedron_atd.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

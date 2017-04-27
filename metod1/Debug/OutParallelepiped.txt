@@ -1,0 +1,1 @@
+It is Parallelepiped: a = 2, b = 2, c = 2, Density = 3

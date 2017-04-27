@@ -70,7 +70,8 @@ namespace simple_shapes {
 
 			current = c.Current->cont;
 			Out(*current, ofst);
-			
+			ofst << "volume = " << Volume(*current) << endl;
+
 			current = nullptr;
 			delete current;
 		}
@@ -110,8 +111,6 @@ namespace simple_shapes {
 				Out(*current, ofst);
 			}
 
-			ofst << "volume = " << Volume(*current) << endl;
-
 			current = nullptr;
 			delete current;
 		}
@@ -130,8 +129,6 @@ namespace simple_shapes {
 			if (current->key == shape::type::TETRAHEDRON) {
 				Out(*current, ofst);
 			}
-
-			ofst << "volume = " << Volume(*current) << endl;
 
 			current = nullptr;
 			delete current;

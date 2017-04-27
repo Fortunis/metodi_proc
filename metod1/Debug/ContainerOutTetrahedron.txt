@@ -1,0 +1,3 @@
+Only tetrahedrons.
+It is Tetrahedron: t = 6, Density = 18
+temperature = 7

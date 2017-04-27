@@ -1,0 +1,7 @@
+Only balls.
+It is Ball: r = 1000, Density = 1
+temperature = 7
+It is Ball: r = 1, Density = 4
+temperature = 7
+It is Ball: r = 2000, Density = 2
+temperature = 7

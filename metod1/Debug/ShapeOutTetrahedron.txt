@@ -1,0 +1,2 @@
+It is Tetrahedron: t = 2, Density = 3
+temperature = 4

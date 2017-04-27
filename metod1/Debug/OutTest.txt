@@ -1,0 +1,1 @@
+It is Tetrahedron: t = 2, Density = 3
