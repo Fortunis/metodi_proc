@@ -16,8 +16,7 @@ namespace simple_shapes {
 class BallTest : public ::testing::Test {
 };
 
-TEST_F(BallTest, CheckVolume)
-{
+TEST_F(BallTest, CheckVolume){
 	ball b;
 	b.r = 1;
 	b.d = 0;
@@ -25,8 +24,7 @@ TEST_F(BallTest, CheckVolume)
 	ASSERT_NEAR(expected, Volume(b), 0.01);
 }
 
-TEST_F(BallTest, CheckInput)
-{
+TEST_F(BallTest, CheckInput){
 	ifstream ifst("InBall.txt");
 	ball* actual = InBall(ifst);
 	ball b;
@@ -37,8 +35,7 @@ TEST_F(BallTest, CheckInput)
 	ASSERT_NEAR(actual->d, b.d, 0.01);
 }
 
-TEST_F(BallTest, CheckOutput)
-{
+TEST_F(BallTest, CheckOutput){
 	ofstream ofst("OutTest.txt");
 	ball b;
 	b.r = 2;

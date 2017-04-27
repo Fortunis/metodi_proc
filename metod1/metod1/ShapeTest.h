@@ -20,8 +20,7 @@ namespace simple_shapes {
 class ShapeTest : public ::testing::Test {
 };
 
-TEST_F(ShapeTest, CheckInputBall)
-{
+TEST_F(ShapeTest, CheckInputBall){
 	ifstream ifst("ShapeInBall.txt");
 	shape* actual = In(ifst);
 
@@ -34,8 +33,7 @@ TEST_F(ShapeTest, CheckInputBall)
 	ASSERT_EQ(expected->temperature, actual->temperature);
 }
 
-TEST_F(ShapeTest, CheckInputParallelepiped)
-{
+TEST_F(ShapeTest, CheckInputParallelepiped){
 	ifstream ifst("ShapeInParallelepiped.txt");
 	shape* actual = In(ifst);
 
@@ -48,8 +46,7 @@ TEST_F(ShapeTest, CheckInputParallelepiped)
 	ASSERT_EQ(expected->temperature, actual->temperature);
 }
 
-TEST_F(ShapeTest, CheckInputTetrahedron)
-{
+TEST_F(ShapeTest, CheckInputTetrahedron){
 	ifstream ifst("ShapeInTetrahedron.txt");
 	shape* actual = In(ifst);
 
@@ -62,8 +59,7 @@ TEST_F(ShapeTest, CheckInputTetrahedron)
 	ASSERT_EQ(expected->temperature, actual->temperature);
 }
 
-TEST_F(ShapeTest, CheckOutputBall)
-{
+TEST_F(ShapeTest, CheckOutputBall){
 	ofstream ofst("ShapeOutTest.txt");
 
 	shape* s;
@@ -85,8 +81,7 @@ TEST_F(ShapeTest, CheckOutputBall)
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ShapeTest, CheckOutputParallelepiped)
-{
+TEST_F(ShapeTest, CheckOutputParallelepiped){
 	ofstream ofst("ShapeOutTest.txt");
 
 	shape* s;
@@ -110,8 +105,7 @@ TEST_F(ShapeTest, CheckOutputParallelepiped)
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ShapeTest, CheckOutputTetrahedron)
-{
+TEST_F(ShapeTest, CheckOutputTetrahedron){
 	ofstream ofst("ShapeOutTest.txt");
 
 	shape* s;
@@ -134,8 +128,7 @@ TEST_F(ShapeTest, CheckOutputTetrahedron)
 }
 
 
-TEST_F(ShapeTest, CheckCompare)
-{
+TEST_F(ShapeTest, CheckCompare){
 	shape* s1;
 	s1 = new shape;
 	s1->key = shape::type::TETRAHEDRON;

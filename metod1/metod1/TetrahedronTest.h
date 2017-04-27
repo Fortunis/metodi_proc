@@ -16,8 +16,7 @@ namespace simple_shapes {
 class TetrahedronTest : public ::testing::Test {
 };
 
-TEST_F(TetrahedronTest, CheckVolume)
-{
+TEST_F(TetrahedronTest, CheckVolume){
 	tetrahedron t;
 	t.l = 6;
 	t.d = 0;
@@ -25,8 +24,7 @@ TEST_F(TetrahedronTest, CheckVolume)
 	ASSERT_NEAR(expected, Volume(t), 0.01);
 }
 
-TEST_F(TetrahedronTest, CheckInput)
-{
+TEST_F(TetrahedronTest, CheckInput){
 	ifstream ifst("InTetrahedron.txt");
 	tetrahedron* actual = InTetrahedron(ifst);
 	tetrahedron t;
@@ -37,8 +35,7 @@ TEST_F(TetrahedronTest, CheckInput)
 	ASSERT_NEAR(actual->d, t.d, 0.01);
 }
 
-TEST_F(TetrahedronTest, CheckOutput)
-{
+TEST_F(TetrahedronTest, CheckOutput){
 	ofstream ofst("OutTest.txt");
 	tetrahedron t;
 	t.l = 2;

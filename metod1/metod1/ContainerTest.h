@@ -22,8 +22,7 @@ namespace simple_shapes {
 class ContainerTest : public ::testing::Test {
 };
 
-TEST_F(ContainerTest, CheckClear)
-{
+TEST_F(ContainerTest, CheckClear){
 	ifstream ifst("ContainerInput.txt");
 	ofstream ofst("ContainerTest.txt");
 
@@ -40,8 +39,7 @@ TEST_F(ContainerTest, CheckClear)
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckOutBall)
-{
+TEST_F(ContainerTest, CheckOutBall){
 	ifstream ifst("ContainerInput.txt");
 	ofstream ofst("ContainerTest.txt");
 
@@ -57,8 +55,7 @@ TEST_F(ContainerTest, CheckOutBall)
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckOutParallelepiped)
-{
+TEST_F(ContainerTest, CheckOutParallelepiped){
 	ifstream ifst("ContainerInput.txt");
 	ofstream ofst("ContainerTest.txt");
 
@@ -74,8 +71,7 @@ TEST_F(ContainerTest, CheckOutParallelepiped)
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckOutTetrahedron)
-{
+TEST_F(ContainerTest, CheckOutTetrahedron){
 	ifstream ifst("ContainerInput.txt");
 	ofstream ofst("ContainerTest.txt");
 
@@ -91,8 +87,7 @@ TEST_F(ContainerTest, CheckOutTetrahedron)
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckSort)
-{
+TEST_F(ContainerTest, CheckSort){
 	ifstream ifst("ContainerInput.txt");
 	ofstream ofst("ContainerTest.txt");
 
@@ -109,8 +104,7 @@ TEST_F(ContainerTest, CheckSort)
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckSortEmpty)
-{
+TEST_F(ContainerTest, CheckSortEmpty){
 	ifstream ifst("Empty.txt");
 	ofstream ofst("ContainerTest.txt");
 
@@ -127,8 +121,7 @@ TEST_F(ContainerTest, CheckSortEmpty)
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckSortEqual)
-{
+TEST_F(ContainerTest, CheckSortEqual){
 	ifstream ifst("ContainerEqual.txt");
 	ofstream ofst("ContainerTest.txt");
 

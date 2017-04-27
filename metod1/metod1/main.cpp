@@ -23,7 +23,7 @@ namespace simple_shapes {
 using namespace simple_shapes;
 
 int main(int argc, char* argv[]) {
-	/*if(argc !=3) {
+	if(argc !=3) {
 		cout << "incorrect command line! "
 		"Waited: command infile outfile" << endl;
 		exit(1);
@@ -31,21 +31,31 @@ int main(int argc, char* argv[]) {
 
 	ifstream ifst(argv[1]);
 	ofstream ofst(argv[2]);
+	/*
+	double a = 0;
+	ifst >> a;
+	double b = a*a;
+	if (b / a != a) {
+		cout << "ERROR" << endl;
 
+	}
+	ofst << b;
+	*/
+	
 	cout << "Start"<< endl;
 	container c;
 	In(c, ifst);
 	ofst << "Filled container. " << endl;
 	Out(c, ofst);
-	OutBall(c, ofst);
+	/*OutBall(c, ofst);
 	Sort(c);
 	ofst << "Sorted container. " << endl;
 	Out(c, ofst);
 	Clear(c);
 	ofst << "Empty container. " << endl;
-	Out(c, ofst);
-	cout << "Stop"<< endl;*/
-
-	::testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
+	Out(c, ofst);*/
+	cout << "Stop"<< endl;
+	
+	//::testing::InitGoogleTest(&argc, argv);
+	//return RUN_ALL_TESTS();
 }

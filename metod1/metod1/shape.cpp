@@ -14,7 +14,24 @@ namespace simple_shapes {
 	{
 		shape *sp;
 		int k;
+		if (!ifst) {
+			cerr << "Error: no input file!" << endl;
+			exit(1);
+		}
 		ifst >> k;
+		if (ifst.fail()){
+			cout << "Wrong input!" << endl;
+			exit(1);
+		}
+		if (!(1 <= k && k <= 3)) {
+			cerr << "Error: unknown type" << endl;
+			exit(1);
+		}
+		if (ifst.eof()) {
+			cerr << "Error: no data after type!" << endl;
+			exit(1);
+		}
+		
 		switch(k) {
 			case 1:
 				sp = new shape;
@@ -32,9 +49,14 @@ namespace simple_shapes {
 				sp->obj = (void*)InTetrahedron(ifst);
 				break;
 			default:
+				cerr << "Incorrect figure!" << endl;
 				return NULL;
 		}
 		ifst >> sp->temperature;
+		if (ifst.fail()){
+			cout << "Wrong input!" << endl;
+			exit(1);
+		}
 		return sp;
 	}
 
@@ -44,6 +66,11 @@ namespace simple_shapes {
 	void OutTetrahedron(tetrahedron &t, ofstream &ofst);
 	// ¬ывод параметров текущей фигуры в поток
 	void Out(shape &s, ofstream &ofst) {
+		if (!ofst) {
+			cerr << "Error: no output file!" << endl;
+			exit(1);
+		}
+		
 		switch (s.key) {
 		case shape::type::BALL:
 			OutBall(*(ball *)s.obj, ofst);
