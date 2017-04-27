@@ -7,33 +7,32 @@ using namespace std;
 
 namespace simple_shapes {
 	// Очистка контейнера от элементов
-	// (освобождение памяти)
 	void Clear(container &c) {
 		while (c.size != 0) {
-			container *temp = c.Head->Next;
-			delete c.Head;
-			c.Head = temp;
+			container *temp = c.head->next;
+			delete c.head;
+			c.head = temp;
 			--c.size;
 		}
 
-		c.Head = nullptr;
-		c.Tail = nullptr;
-		c.Current = nullptr;
+		c.head = nullptr;
+		c.tail = nullptr;
+		c.current = nullptr;
 	}
-
+	//Добавление элемента в список
 	void Add(container &c, shape &s){
 		++c.size;
 		container* temp = new container;
 		temp->cont = &s;
-		temp->Next = c.Head;
-		c.Current = temp;
+		temp->next = c.head;
+		c.current = temp;
 
-		if (c.Head != nullptr) {
-			c.Tail->Next = temp;
-			c.Tail = temp;
+		if (c.head != nullptr) {
+			c.tail->next = temp;
+			c.tail = temp;
 		}
 		else {
-			c.Head = c.Tail = temp;
+			c.head = c.tail = temp;
 		}
 	}
 
@@ -61,8 +60,8 @@ namespace simple_shapes {
 	void Out(shape &s, ofstream &ofst);
 
 	double Volume(shape &s);
+	
 	// Вывод содержимого контейнера в указанный поток
-
 	void Out(container &c, ofstream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
@@ -79,9 +78,9 @@ namespace simple_shapes {
 
 			for (int i = 0; i < c.size; i++) {
 
-				c.Current = c.Current->Next;
+				c.current = c.current->next;
 
-				current = c.Current->cont;
+				current = c.current->cont;
 				Out(*current, ofst);
 				ofst << "volume = " << Volume(*current) << endl;
 
@@ -91,7 +90,7 @@ namespace simple_shapes {
 		}
 	}
 
-	
+	//Вывод только шаров
 	void OutBall(container &c, ofstream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
@@ -106,9 +105,9 @@ namespace simple_shapes {
 
 			for (int i = 0; i < c.size; i++) {
 
-				c.Current = c.Current->Next;
+				c.current = c.current->next;
 
-				current = c.Current->cont;
+				current = c.current->cont;
 				if (current->key == shape::type::BALL) {
 					Out(*current, ofst);
 				}
@@ -119,6 +118,7 @@ namespace simple_shapes {
 		}
 	}
 
+	//Вывод только параллелепипедов
 	void OutParallelepiped(container &c, ofstream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
@@ -133,9 +133,9 @@ namespace simple_shapes {
 
 			for (int i = 0; i < c.size; i++) {
 
-				c.Current = c.Current->Next;
+				c.current = c.current->next;
 
-				current = c.Current->cont;
+				current = c.current->cont;
 				if (current->key == shape::type::PARALLELEPIPED) {
 					Out(*current, ofst);
 				}
@@ -146,6 +146,7 @@ namespace simple_shapes {
 		}
 	}
 
+	//Вывод только тетраэдров
 	void OutTetrahedron(container &c, ofstream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
@@ -160,9 +161,9 @@ namespace simple_shapes {
 
 			for (int i = 0; i < c.size; i++) {
 
-				c.Current = c.Current->Next;
+				c.current = c.current->next;
 
-				current = c.Current->cont;
+				current = c.current->cont;
 				if (current->key == shape::type::TETRAHEDRON) {
 					Out(*current, ofst);
 				}
@@ -172,30 +173,32 @@ namespace simple_shapes {
 			}
 		}
 	}
+
 	// Сигнатуры требуемых функций
 	bool Compare(shape *first, shape *second);
 	
+	//Сортировка элементов списка
 	void Sort(container &l)	{
 		container *s, *ptr;
 		shape *temp;
-		if (l.Tail == nullptr) {
+		if (l.tail == nullptr) {
 			return;
 		}
-		s = l.Tail->Next;
+		s = l.tail->next;
 
-		while (s != l.Tail) {		
-			ptr = s->Next;
-			while (ptr != l.Tail->Next) {			
-				if (ptr != l.Tail->Next) {				
-						if (Compare(s->cont, ptr->cont)) {						{
+		while (s != l.tail) {		
+			ptr = s->next;
+			while (ptr != l.tail->next) {			
+				if (ptr != l.tail->next) {				
+						if (Compare(s->cont, ptr->cont)) {						
 							temp = s->cont;
 							s->cont = ptr->cont;
 							ptr->cont = temp;
 						}
 				}
-				ptr = ptr->Next;
+				ptr = ptr->next;
 			}
-			s = s->Next;
+			s = s->next;
 		}
 	}
 

@@ -11,8 +11,8 @@ namespace simple_shapes {
 		int size = 0;
 
 		shape *cont = nullptr;
-		container* Next = nullptr;
-		container *Head = nullptr, *Tail = nullptr, *Current = nullptr;
+		container* next = nullptr;
+		container *head = nullptr, *tail = nullptr, *current = nullptr;
 	};
 } // end simple_shapes namespace
 #endif
