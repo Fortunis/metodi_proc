@@ -17,6 +17,7 @@ namespace simple_shapes {
 	void Out(container &c, ofstream &ofst);
 	void OutBall(container &c, ofstream &ofst);
 	void Sort(container &c);
+	void MultiMethod(container &c, ofstream &ofst);
 }
 
 
@@ -46,7 +47,7 @@ int main(int argc, char* argv[]) {
 	container c;
 	In(c, ifst);
 	ofst << "Filled container. " << endl;
-	Out(c, ofst);
+	MultiMethod(c, ofst);
 	/*OutBall(c, ofst);
 	Sort(c);
 	ofst << "Sorted container. " << endl;

@@ -202,4 +202,80 @@ namespace simple_shapes {
 		}
 	}
 
+	//-----------------------------------------------------
+	// Ìףכüעטלועמה
+	void MultiMethod(container &c, ofstream &ofst) {
+		if (ofst.fail()) {
+			cerr << "Error: Unable to open output file" << endl;
+			return;
+		}
+		else {
+			if (c.size) {
+				ofst << "Multimethods:\n";
+			}
+			else {
+				ofst << "Container is empty:\n";
+			}
+			container* temp = nullptr;
+			for (int i = 0; i < c.size; i++) {
+				c.current = c.current->next;
+				temp = c.current;
+				for (int j = 0; j < c.size; j++) {
+					switch (c.current->cont->key) {
+					case shape::BALL:
+						switch (temp->cont->key) {
+						case shape::BALL:
+							ofst << "Ball and Ball." << endl;
+							break;
+						case shape::PARALLELEPIPED:
+							ofst << "Ball and Parallelepiped." << endl;
+							break;
+						case shape::TETRAHEDRON:
+							ofst << "Ball and Tetrahedron." << endl;
+							break;
+						default:
+							ofst << "Unknown type" << endl;
+						}
+						break;
+					case shape::PARALLELEPIPED:
+						switch (temp->cont->key) {
+						case shape::BALL:
+							ofst << "Parallelepiped and Ball." << endl;
+							break;
+						case shape::PARALLELEPIPED:
+							ofst << "Parallelepiped and Parallelepiped." << endl;
+							break;
+						case shape::TETRAHEDRON:
+							ofst << "Parallelepiped and Tetrahedron." << endl;
+							break;
+						default:
+							ofst << "Unknown type" << endl;
+						}
+						break;
+					case shape::TETRAHEDRON:
+						switch (temp->cont->key) {
+						case shape::BALL:
+							ofst << "Tetrahedron and Ball." << endl;
+							break;
+						case shape::PARALLELEPIPED:
+							ofst << "Tetrahedron and Parallelepiped." << endl;
+							break;
+						case shape::TETRAHEDRON:
+							ofst << "Tetrahedron and Tetrahedron." << endl;
+							break;
+						default:
+							ofst << "Unknown type" << endl;
+						}
+						break;
+					default:
+						ofst << "Unknown type" << endl;
+					}
+					Out(*c.current->cont, ofst);
+					Out(*temp->cont, ofst);
+					temp = temp->next;
+				}
+			}
+		}
+	}
+
 } // end simple_shapes namespace

@@ -1,0 +1,47 @@
+Filled container. 
+Multimethods:
+Ball and Ball.
+It is Ball: r = 2, Density = 1
+temperature = 7
+It is Ball: r = 2, Density = 1
+temperature = 7
+Ball and Parallelepiped.
+It is Ball: r = 2, Density = 1
+temperature = 7
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+temperature = 7
+Ball and Tetrahedron.
+It is Ball: r = 2, Density = 1
+temperature = 7
+It is Tetrahedron: t = 6, Density = 18
+temperature = 7
+Parallelepiped and Parallelepiped.
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+temperature = 7
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+temperature = 7
+Parallelepiped and Tetrahedron.
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+temperature = 7
+It is Tetrahedron: t = 6, Density = 18
+temperature = 7
+Parallelepiped and Ball.
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+temperature = 7
+It is Ball: r = 2, Density = 1
+temperature = 7
+Tetrahedron and Tetrahedron.
+It is Tetrahedron: t = 6, Density = 18
+temperature = 7
+It is Tetrahedron: t = 6, Density = 18
+temperature = 7
+Tetrahedron and Ball.
+It is Tetrahedron: t = 6, Density = 18
+temperature = 7
+It is Ball: r = 2, Density = 1
+temperature = 7
+Tetrahedron and Parallelepiped.
+It is Tetrahedron: t = 6, Density = 18
+temperature = 7
+It is Parallelepiped: a = 1, b = 2, c = 3, Density = 4
+temperature = 7
