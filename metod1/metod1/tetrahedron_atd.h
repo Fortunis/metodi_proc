@@ -5,7 +5,6 @@ namespace simple_shapes {
 	// шар
 	struct tetrahedron {
 		int l; // длина стороны
-		float d; //плотность(density)
 	};
 } // end simple_shapes namespace
 #endif

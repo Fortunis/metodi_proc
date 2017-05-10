@@ -57,12 +57,12 @@ namespace simple_shapes {
 	}
 
 	// Сигнатуры требуемых внешних функций
-	void Out(shape &s, ofstream &ofst);
+	void Out(shape &s, ostream &ofst);
 
 	double Volume(shape &s);
 	
 	// Вывод содержимого контейнера в указанный поток
-	void Out(container &c, ofstream &ofst) {
+	void Out(container &c, ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
 			return;
@@ -91,7 +91,7 @@ namespace simple_shapes {
 	}
 
 	//Вывод только шаров
-	void OutBall(container &c, ofstream &ofst) {
+	void OutBall(container &c, ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
 			exit(1);
@@ -119,7 +119,7 @@ namespace simple_shapes {
 	}
 
 	//Вывод только параллелепипедов
-	void OutParallelepiped(container &c, ofstream &ofst) {
+	void OutParallelepiped(container &c, ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
 			exit(1);
@@ -147,7 +147,7 @@ namespace simple_shapes {
 	}
 
 	//Вывод только тетраэдров
-	void OutTetrahedron(container &c, ofstream &ofst) {
+	void OutTetrahedron(container &c, ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: Unable to open output file" << endl;
 			exit(1);
@@ -178,7 +178,7 @@ namespace simple_shapes {
 	bool Compare(shape *first, shape *second);
 	
 	//Сортировка элементов списка
-	void Sort(container &l)	{
+	void Sort(container &l,int des)	{
 		container *s, *ptr;
 		shape *temp;
 		if (l.tail == nullptr) {
@@ -189,12 +189,27 @@ namespace simple_shapes {
 		while (s != l.tail) {		
 			ptr = s->next;
 			while (ptr != l.tail->next) {			
-				if (ptr != l.tail->next) {				
-						if (Compare(s->cont, ptr->cont)) {						
-							temp = s->cont;
-							s->cont = ptr->cont;
-							ptr->cont = temp;
-						}
+				if (ptr != l.tail->next) {	
+					switch (des)
+					{
+						case 0:
+							if (Compare(s->cont, ptr->cont)) {
+								temp = s->cont;
+								s->cont = ptr->cont;
+								ptr->cont = temp;
+							}
+							break;
+						case 1:
+							if (!Compare(s->cont, ptr->cont)) {
+								temp = s->cont;
+								s->cont = ptr->cont;
+								ptr->cont = temp;
+							}
+							break;
+						default:
+							cerr << "Inknown des" << endl;
+							exit(1);
+					}
 				}
 				ptr = ptr->next;
 			}
@@ -204,7 +219,7 @@ namespace simple_shapes {
 
 	//-----------------------------------------------------
 	// Мультиметод
-	void MultiMethod(container &c, ofstream &ofst) {
+	void MultiMethod(container &c, ostream &ofst) {
 		if (ofst.fail()) {
 			cerr << "Error: Unable to open output file" << endl;
 			return;

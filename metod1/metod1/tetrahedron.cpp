@@ -13,12 +13,12 @@ namespace simple_shapes {
 			cerr << "Error: no input file!" << endl;
 			exit(1);
 		}
-		ifst >> t->l >> t->d;
+		ifst >> t->l;
 		if (ifst.fail()) {
 			cout << "Wrong input!" << endl;
 			exit(1);
 		}
-		if (t->l <= 0 || t->d <= 0) {
+		if (t->l <= 0) {
 			cerr << "Error: Incorrect values in tetrahedron input" << endl;
 			exit(1);
 		}
@@ -26,12 +26,12 @@ namespace simple_shapes {
 	}
 
 	// Вывод параметров прямоугольника в поток
-	void OutTetrahedron(tetrahedron &t, ofstream &ofst) {
+	void OutTetrahedron(tetrahedron &t, ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
 		}
-		ofst << "It is Tetrahedron: t = " << t.l << ", Density = " << t.d << endl;
+		ofst << "It is Tetrahedron: t = " << t.l << endl;
 	}
 
 	double Volume(tetrahedron &b) {

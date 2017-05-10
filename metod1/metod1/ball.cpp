@@ -13,12 +13,12 @@ namespace simple_shapes {
 			cerr << "Error: no input file!" << endl;
 			exit(1);
 		}
-		ifst >> b->r >> b->d;
+		ifst >> b->r;
 		if (ifst.fail()) {
 			cout << "Wrong input!" << endl;
 			exit(1);
 		}
-		if (b->r <= 0 || b->d <= 0) {
+		if (b->r <= 0) {
 			cerr << "Error: Incorrect values in ball input" << endl;
 			exit(1);
 		}
@@ -26,12 +26,12 @@ namespace simple_shapes {
 	}
 
 	// Вывод параметров прямоугольника в поток
-	void OutBall(ball &b, ofstream &ofst) {
+	void OutBall(ball &b, ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
 		}
-		ofst << "It is Ball: r = " << b.r << ", Density = "<< b.d << endl;
+		ofst << "It is Ball: r = " << b.r << endl;
 	}
 
 	double Volume(ball &b) {

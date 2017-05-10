@@ -14,7 +14,8 @@ namespace simple_shapes {
 		type key; // ключ
 		// используемые альтернативы
 		void* obj;
-
+		
+		float d; //плотность(density)
 		int temperature;
 	};
 } // end simple_shapes namespace

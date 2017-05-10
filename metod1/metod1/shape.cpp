@@ -12,7 +12,6 @@ namespace simple_shapes {
 	// Ввод параметров обобщенной фигуры из файла
 	shape* In(ifstream &ifst)
 	{
-		shape *sp;
 		int k;
 		if (!ifst) {
 			cerr << "Error: no input file!" << endl;
@@ -31,26 +30,32 @@ namespace simple_shapes {
 			cerr << "Error: no data after type!" << endl;
 			exit(1);
 		}
-		
+		shape *sp = new shape;
 		switch(k) {
 			case 1:
-				sp = new shape;
 				sp->key = shape::type::BALL;
 				sp->obj = (void*)InBall(ifst);
 				break;
 			case 2:
-				sp = new shape;
 				sp->key = shape::type::PARALLELEPIPED;
 				sp->obj = (void*)InParallelepiped(ifst);
 				break;
 			case 3:
-				sp = new shape;
 				sp->key = shape::type::TETRAHEDRON;
 				sp->obj = (void*)InTetrahedron(ifst);
 				break;
 			default:
 				cerr << "Incorrect figure!" << endl;
 				return NULL;
+		}
+		ifst >> sp->d;
+		if (ifst.fail()) {
+			cout << "Wrong input!" << endl;
+			exit(1);
+		}
+		if (sp->d <= 0) {
+			cout << "Wrong density!" << endl;
+			exit(1);
 		}
 		ifst >> sp->temperature;
 		if (ifst.fail()){
@@ -61,11 +66,11 @@ namespace simple_shapes {
 	}
 
 	// Сигнатуры требуемых внешних функций.
-	void OutBall(ball &b, ofstream &ofst);
-	void OutParallelepiped(parallelepiped &p, ofstream &ofst);
-	void OutTetrahedron(tetrahedron &t, ofstream &ofst);
+	void OutBall(ball &b, ostream &ofst);
+	void OutParallelepiped(parallelepiped &p, ostream &ofst);
+	void OutTetrahedron(tetrahedron &t, ostream &ofst);
 	// Вывод параметров текущей фигуры в поток
-	void Out(shape &s, ofstream &ofst) {
+	void Out(shape &s, ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
@@ -84,6 +89,7 @@ namespace simple_shapes {
 		default:
 			ofst << "Incorrect figure!" << endl;
 		}
+		ofst << "density = " << s.d << endl;
 		ofst << "temperature = " << s.temperature << endl;
 	}
 

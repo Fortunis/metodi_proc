@@ -83,23 +83,16 @@
   <ItemGroup>
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="container.cpp" />
-    <ClCompile Include="FilesCmp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="parallelepiped.cpp" />
     <ClCompile Include="shape.cpp" />
     <ClCompile Include="tetrahedron.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BallTest.h" />
     <ClInclude Include="ball_atd.h" />
-    <ClInclude Include="ContainerTest.h" />
     <ClInclude Include="container_atd.h" />
-    <ClInclude Include="FilesCmp.h" />
-    <ClInclude Include="ParallelepipedTest.h" />
     <ClInclude Include="parallelepiped_atd.h" />
-    <ClInclude Include="ShapeTest.h" />
     <ClInclude Include="shape_atd.h" />
-    <ClInclude Include="TetrahedronTest.h" />
     <ClInclude Include="tetrahedron_atd.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

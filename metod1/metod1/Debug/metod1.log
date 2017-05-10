@@ -1,11 +1,6 @@
-﻿  tetrahedron.cpp
-  shape.cpp
-  parallelepiped.cpp
+﻿  shape.cpp
   main.cpp
-  FilesCmp.cpp
   container.cpp
-  ball.cpp
   Создание кода...
-ball.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/SAFESEH"
-  metod1.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\Женя\7b\metod1\Debug\metod1.exe
-  metod1.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\Женя\7b\metod1\Debug\metod1.pdb (Full PDB)
+  metod1.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\Даша\8\7b\metod1\Debug\metod1.exe
+  metod1.vcxproj -> C:\Users\Евгений\Documents\Методы программирования\Даша\8\7b\metod1\Debug\metod1.pdb (Full PDB)

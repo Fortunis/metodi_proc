@@ -13,12 +13,12 @@ namespace simple_shapes {
 			cerr << "Error: no input file!" << endl;
 			exit(1);
 		}
-		ifst >> p->a >> p->b >> p->c >> p->d;
+		ifst >> p->a >> p->b >> p->c;
 		if (ifst.fail()) {
 			cout << "Wrong input!" << endl;
 			exit(1);
 		}
-		if (p->a <= 0 || p->b <= 0 || p->c <= 0 || p->d <= 0) {
+		if (p->a <= 0 || p->b <= 0 || p->c <= 0) {
 			cerr << "Error: Incorrect values in parallelepiped input" << endl;
 			exit(1);
 		}
@@ -26,15 +26,14 @@ namespace simple_shapes {
 	}
 
 	// Вывод параметров треугольника в поток
-	void OutParallelepiped(parallelepiped &p, ofstream &ofst) {
+	void OutParallelepiped(parallelepiped &p, ostream &ofst) {
 		if (!ofst) {
 			cerr << "Error: no output file!" << endl;
 			exit(1);
 		}
 		ofst << "It is Parallelepiped: a = "
 		<< p.a << ", b = " << p.b
-		<< ", c = " << p.c 
-		<< ", Density = " << p.d << endl;
+		<< ", c = " << p.c << endl;
 	}
 
 	double Volume(parallelepiped &p) {
